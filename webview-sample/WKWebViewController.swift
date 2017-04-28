@@ -31,12 +31,6 @@ class WKWebViewController: UIViewController {
         wkWebView.trailingAnchor.constraint(equalTo: wrapperView.trailingAnchor, constant: 0).isActive = true
         
         wrapperView.layoutIfNeeded()
-        if let url = URL(string: urlString) {
-            var req = URLRequest(url: url)
-            req.cachePolicy = .reloadIgnoringLocalCacheData
-            
-            webView?.load(req)
-        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -46,7 +40,16 @@ class WKWebViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        webView?.reloadFromOrigin()
+        URLCache.shared.removeAllCachedResponses()
+        
+        webView?.loadHTMLString("", baseURL: nil)
+        
+        if let url = URL(string: urlString) {
+            var req = URLRequest(url: url)
+            req.cachePolicy = .reloadIgnoringLocalCacheData
+            
+            webView?.load(req)
+        }
     }
 
 
