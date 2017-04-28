@@ -18,7 +18,13 @@ class UIWebViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
+        if let url = URL(string: urlString) {
+            var req = URLRequest(url: url)
+            
+            req.cachePolicy = .reloadIgnoringLocalCacheData
+            
+            webView.loadRequest(req)
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,14 +34,7 @@ class UIWebViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        if let url = URL(string: urlString) {
-            var req = URLRequest(url: url)
-            
-            req.cachePolicy = .reloadIgnoringLocalCacheData
-            
-            webView.loadRequest(req)
-        }
+        webView.reload()
     }
 
     /*
