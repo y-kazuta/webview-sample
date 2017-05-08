@@ -16,6 +16,7 @@
 		AE6A14461EAF23F7005026C5 /* webview_sampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6A14451EAF23F7005026C5 /* webview_sampleUITests.swift */; };
 		AE6A14991EB2E35C005026C5 /* UIWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6A14981EB2E35C005026C5 /* UIWebViewController.swift */; };
 		AE6A149B1EB2E37B005026C5 /* WKWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6A149A1EB2E37B005026C5 /* WKWebViewController.swift */; };
+		AE6A14A11EC0743E005026C5 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AE6A14A01EC0743E005026C5 /* Settings.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		AE6A14471EAF23F7005026C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE6A14981EB2E35C005026C5 /* UIWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIWebViewController.swift; sourceTree = "<group>"; };
 		AE6A149A1EB2E37B005026C5 /* WKWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKWebViewController.swift; sourceTree = "<group>"; };
+		AE6A14A01EC0743E005026C5 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				AE6A142E1EAF23F7005026C5 /* LaunchScreen.storyboard */,
 				AE6A14311EAF23F7005026C5 /* Info.plist */,
 				AE6A14291EAF23F7005026C5 /* webview_sample.xcdatamodeld */,
+				AE6A14A01EC0743E005026C5 /* Settings.bundle */,
 			);
 			path = "webview-sample";
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE6A14A11EC0743E005026C5 /* Settings.bundle in Resources */,
 				AE6A14301EAF23F7005026C5 /* LaunchScreen.storyboard in Resources */,
 				AE6A142D1EAF23F7005026C5 /* Assets.xcassets in Resources */,
 				AE6A14281EAF23F7005026C5 /* Main.storyboard in Resources */,
