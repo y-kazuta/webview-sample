@@ -13,12 +13,14 @@ class WKWebViewController: UIViewController {
 
     var webView: WKWebView?
     
-    let urlString = "http://www.uniqlo.com/kr/ko/"
     
     @IBOutlet weak var wrapperView: UIView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        UserDefaults.resetStandardUserDefaults()
+        let userDefaults = UserDefaults.standard
 
         let wkWebView = WKWebView()
         view.addSubview(wkWebView)

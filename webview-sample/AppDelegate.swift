@@ -8,6 +8,8 @@
 
 import UIKit
 
+var urlString = "http://www.uniqlo.com/kr/ko/women"
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -16,6 +18,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let userDefaults = UserDefaults.standard
+        if let plist = Bundle.main.path(forResource: "Root", ofType: "plist", inDirectory: "Settings.bundle"),
+            let settings = NSDictionary.init(contentsOfFile: plist),
+            let prefs = settings.object(forKey: "PreferenceSpecifiers") as? NSArray {
+            prefs.forEach({ (pref: Any) in
+                guard let pref = pref as? NSDictionary,
+                    let key = pref.object(forKey: "Key") as? String else {
+                    return
+                }
+                
+                let obj = userDefaults.object(forKey: key)
+                if obj == nil {
+                    guard let defaultValue = pref.object(forKey: "DefaultValue") else {
+                        return
+                    }
+                    userDefaults.setValue(defaultValue, forKey: key)
+                }
+            })
+            
+        }
+        
+        if let url = userDefaults.string(forKey: "webview_url") {
+            urlString = url
+        }
+
         return true
     }
 

@@ -10,9 +10,6 @@ import UIKit
 
 class UIWebViewController: UIViewController {
 
-    let urlString = "http://www.uniqlo.com/kr/ko/"
-
-
     @IBOutlet weak var webView: UIWebView!
     override func viewDidLoad() {
         super.viewDidLoad()
