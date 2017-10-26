@@ -14,7 +14,7 @@
 			<key>Key</key>
 			<string>webview_url</string>
 			<key>DefaultValue</key>
-			<string>http://www.uniqlo.com/kr/ko/women</string>
+			<string>http://www.example.com/</string>
 		</dict>
 	</array>
 </dict>
