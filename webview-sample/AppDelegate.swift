@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Fabric
+import Crashlytics
 
 var urlString = "http://www.uniqlo.com/kr/ko/women"
 
@@ -18,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        Fabric.with([Crashlytics.self])
         
         let userDefaults = UserDefaults.standard
         if let plist = Bundle.main.path(forResource: "Root", ofType: "plist", inDirectory: "Settings.bundle"),
