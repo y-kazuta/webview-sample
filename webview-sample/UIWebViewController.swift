@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class UIWebViewController: UIViewController {
 
@@ -31,11 +33,14 @@ class UIWebViewController: UIViewController {
         // Do any additional setup after loading the view.
         if let url = URL(string: urlString) {
             var req = URLRequest(url: url)
-            
             req.cachePolicy = .reloadIgnoringLocalCacheData
             
             webView.loadRequest(req)
         }
+        
+        NotificationCenter.default.rx.notification(Notification.Name.UIApplicationDidBecomeActive , object: nil).subscribe(onNext: { (notification: Notification) in
+            print("becomeActive")
+        })
     }
 
     /*
