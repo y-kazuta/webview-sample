@@ -1,6 +1,6 @@
 //
-//  webview_sampleTests.swift
-//  webview-sampleTests
+//  WebviewSampleTests.swift
+//  WebviewSampleTests
 //
 //  Created by 數田 裕介 on 2017/04/25.
 //  Copyright © 2017年 數田 裕介. All rights reserved.
@@ -9,7 +9,7 @@
 import XCTest
 @testable import webview_sample
 
-class webview_sampleTests: XCTestCase {
+class WebviewSampleTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
