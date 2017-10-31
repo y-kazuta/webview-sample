@@ -7,6 +7,8 @@ target 'webview-sample' do
 
   # Pods for webview-sample
   pod 'GoogleAnalytics', '3.14.0'
+  pod 'Fabric', '1.6.7'
+  pod 'Crashlytics', '3.7.2'
 
   target 'webview-sampleTests' do
     inherit! :search_paths
